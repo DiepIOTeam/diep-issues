@@ -1,0 +1,121 @@
+name: Bug Report
+description: Report a single bug, visual issue, AI issue, or regression
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚨 One issue = one bug
+        This report must cover **one specific problem** (or a tightly related
+        group on the same tank class/system). If you have multiple unrelated bugs,
+        open multiple issues. Mega-lists will be closed.
+
+        **Account / ban / payment issues** don't belong here — use
+        [Support Tickets](https://support.vexxusarts.com/submit-ticket/3-diepio).
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched open and closed issues and this is not a duplicate
+          required: true
+        - label: This report covers ONE bug or a set of closely related bugs on the same tank class/system
+          required: true
+        - label: I included steps to reproduce below
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Gameplay bug (ability, mechanic, interaction)
+        - Visual / rendering / asset bug
+        - AI / pathing bug
+        - Collision / physics bug
+        - Regression (used to work, now broken)
+        - Performance / technical issue
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: tank
+    attributes:
+      label: Tank class / Feature affected
+      placeholder: "e.g., Overlord, Crasher AI, Pentagon Nest"
+    validations:
+      required: true
+
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version or approximate date noticed
+      placeholder: "e.g., after May 2025 update, or 'has always been this way'"
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the bug in one or two sentences.
+      placeholder: "Overlord drones freeze in place after tabbing out and back in."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps someone else can follow to trigger the bug.
+      placeholder: |
+        1. Pick Overlord
+        2. Send drones to max range
+        3. Right-click to repel
+        4. Tab out and back in
+        5. Try to control drones
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: "Drones return to normal control after refocusing the tab."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      placeholder: "Drones freeze in place and become unresponsive."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Rarely
+        - Happened once
+    validations:
+      required: true
+
+  - type: input
+    id: context
+    attributes:
+      label: Context
+      description: "Browser, device, game mode, region, etc."
+      placeholder: "Chrome, desktop, FFA mode, near Pentagon Nest"
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots / Video / Extra notes
+      description: "Paste links or drag files here. Strongly recommended for visual bugs."
