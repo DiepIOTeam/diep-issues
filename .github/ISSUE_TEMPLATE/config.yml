@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Exploit / Security Report
+    url: https://discord.gg/P64PZaaMtv
+    about: >
+      Do not post exploits publicly. Report them privately via the
+      Diep.io Discord server.
+  - name: 🎫 Account / Payment / Ban Support
+    url: https://support.vexxusarts.com/submit-ticket/3-diepio
+    about: >
+      For account, payment, or ban issues, submit a support ticket.
+      This issue tracker is for game bugs and suggestions only.
+  - name: 💬 Discord Community
+    url: https://discord.gg/P64PZaaMtv
+    about: >
+      Join the community, ask questions, or share broad feedback on
+      the Diep.io Discord server.
