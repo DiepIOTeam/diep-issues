@@ -1,0 +1,74 @@
+name: Feature or Balance Request
+description: Suggest a balance change, new feature, or gameplay improvement
+title: "[Feedback] "
+labels: ["feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## One suggestion per issue
+        Keep each request focused. If you have multiple unrelated ideas,
+        open multiple issues.
+
+        **Account / ban / payment issues** don't belong here — use
+        [Support Tickets](https://support.vexxusarts.com/submit-ticket/3-diepio).
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched open and closed issues and this is not a duplicate
+          required: true
+        - label: This report covers one suggestion or balance concern
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Balance (too strong / too weak / too fast / too slow)
+        - Suggestion (new feature or mechanic)
+        - UX / clarity improvement
+        - Visual polish
+    validations:
+      required: true
+
+  - type: input
+    id: tank
+    attributes:
+      label: Tank class / Feature
+      placeholder: "e.g., Penta Shot, Factory, bullet penetration stat"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What feels wrong or what's missing?
+      placeholder: "Penta Shot's bullet spread makes it almost impossible to miss, giving it too much area denial."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should change?
+      placeholder: "Reduce the spread angle slightly, or lower individual bullet damage to compensate for coverage."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why would this help?
+      placeholder: "It would keep the class viable for crowd control without making it dominate 1v1 engagements."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / examples (optional)
+      description: "Clips, comparisons, or extra context."
